@@ -1,0 +1,146 @@
+.body {
+  overflow: hidden;
+  background: pink;
+}
+
+.container {
+  height: 45vw;
+  width: 100vw;
+  margin: auto;
+  position: relative;
+}
+
+/*
+@media (min-aspect-ratio: 1/8) {
+  .portrait-spacer {
+    height: 25vw;
+  }
+}
+@media (min-aspect-ratio: 5/4) {
+  .portrait-spacer {
+    height: 0px;
+  }
+}*/
+.head {
+  position: absolute;
+  border-radius: 0 0 100% 30%;
+  height: 98%;
+  width: 40%;
+  top: 2%;
+  left: -20%;
+  background: #e1f7d5;
+  overflow: hidden;
+}
+
+.hair-row {
+  position: absolute;
+  width: 60%;
+  height: 5vw;
+  top: -1vw;
+  left: 40%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+
+.curl {
+  background: #cc9797;
+  border-radius: 50%;
+  height: 4vw;
+  width: 4vw;
+  box-sizing: border-box;
+  border: black solid .15vw;
+}
+
+.eyebrow {
+  position: absolute;
+  top: 15%;
+  left: 56%;
+  height: 5%;
+  width: 34%;
+  background: #cc9797;
+  z-index: 2;
+  border-radius: 50% 50% 0 0;
+}
+
+.eye {
+  position: absolute;
+  background: white;
+  top: 25%;
+  left: 62.5%;
+  width: 25%;
+  height: 10%;
+  overflow: hidden;
+  border-radius: 90% 0;
+  transform: rotate(10deg);
+}
+
+.iris {
+  position: absolute;
+  background: #c9c9ff;
+  border-radius: 50%;
+  left: 25%;
+  top: -10%;
+  height: 120%;
+  width: 50%;
+}
+
+.pupil {
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+  left: 20%;
+  top: 20%;
+  height: 60%;
+  width: 60%;
+}
+
+.lid {
+  position: absolute;
+  background: #e1f7d5;
+  top: 15%;
+  left: 59%;
+  width: 30%;
+  height: 10%;
+  overflow: hidden;
+  border-radius: 0 0 50% 50%;
+  animation: blink 4s linear 0.25s infinite;
+}
+
+.nose {
+  position: absolute;
+  background: #e1f7d5;
+  top: 30%;
+  left: 42.5%;
+  width: 15%;
+  height: 30%;
+  transform: skew(10deg);
+  border-radius: 0 0 20%;
+  box-shadow: .1vw .1vw .05vw .05vw black;
+}
+
+.mouth {
+  position: absolute;
+  top: 75%;
+  left: 30%;
+  width: 40%;
+  height: 4%;
+  background: #ffbdbd;
+  border-radius: 0 0 100%;
+}
+
+@keyframes blink {
+  0%, 10%, 90%, 100% {
+    transform: translate(0, 0);
+  }
+  /*39.99%, 59.99%{
+    transform:scale(1);
+  }*/
+  30%, 70% {
+    box-shadow: none;
+  }
+  40%, 60% {
+    transform: translate(0, 4.5vw);
+    box-shadow: 0 .5vw 0 .05vw black;
+  }
+}
